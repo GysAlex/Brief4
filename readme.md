@@ -5,3 +5,7 @@ laravel sanctum.
 Le dossier todolist contient l'ensemble du backend 
 
 Le dossier todolistFront contient l'ensemble du frontend 
+
+
+lancer le serveur interne de laravel avec la command "php artisan serve"
+puis de lancer le serveur du frontend avec la command "npm run dev"
