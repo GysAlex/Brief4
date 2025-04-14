@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	font-family: 'Poppins', 'serif';
+}
+
+*::placeholder {
+	font-size: 14px;
+}
+
+/*Customizing checkbox*/
+
+#actif {
+	appearance: none;
+	position: relative;
+	display: flex;
+	align-items: center;
+	transition: all ease .4s;
+	justify-content: center;
+	width: 50px;
+	height: 30px;
+}
+
+#actif::before
+{
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 20px;
+	background-color: rgb(236, 233, 233);	
+	border-radius: 20px;
+	transition: all ease .3s;
+}
+
+#actif::after
+{
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	box-shadow: 1px 5px 10px rgba(0, 0, 0, .1);
+	left: 0;
+	transition: all ease .3s;
+	border-radius: 50%;
+}
+
+#actif:checked::before
+{
+	background-color: #1449e683;
+}
+
+#actif:checked::after
+{
+	transform: translateX(30px);
+}
+
+/*Customizing checkbox*/
+/* This will be my modal logic form every new project */
+#modal 
+{
+	display: none;
+	transition-behavior: allow-discrete;
+	transition-property: display opacity;
+	transition-duration: .4s;
+	background-color: rgba(0, 0, 0, .2);
+	opacity: 0;
+}
+
+#modal.show 
+{
+	opacity: 1;
+	display: flex;
+
+	@starting-style{
+		opacity: 0;
+	}
+}
+
+#modal form
+{
+	transition-behavior: allow-discrete;
+	transition-property: display opacity;
+	margin-top: 150px;
+	transition-duration: .4s;
+	transform: translateX(-20vw);	
+}
+
+#modal.show form
+{
+	transform: translateX(0);
+	@starting-style{
+		transform: translateX(20vh)
+	}
+}
+
+/* end of modal logic */
+
+/* This will be my modal logic form every new project */
+#modal2 
+{
+	display: none;
+	transition-behavior: allow-discrete;
+	transition-property: display opacity;
+	transition-duration: .4s;
+	background-color: rgba(0, 0, 0, .2);
+	opacity: 0;
+}
+
+#modal2.show 
+{
+	opacity: 1;
+	display: flex;
+
+	@starting-style{
+		opacity: 0;
+	}
+}
+
+#modal2 form
+{
+	transition-behavior: allow-discrete;
+	transition-property: display opacity;
+	margin-top: 150px;
+	transition-duration: .4s;
+	transform: translateX(-20vw);	
+}
+
+#modal2.show form
+{
+	transform: translateX(0);
+	@starting-style{
+		transform: translateX(20vh)
+	}
+}
+
+/* end of modal logic */
